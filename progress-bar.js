@@ -9,7 +9,7 @@
 // La barra podría tener una longitud fija, por ejemplo 10 caracteres.
 
 const endBar = 100;
-const progressBar = 10;
+const progressBar = 10 + 1;
 
 for (
   let startProgressBar = 1;
@@ -17,6 +17,8 @@ for (
   startProgressBar++
 ) {
   console.log(
-    "█".repeat(startProgressBar) + "-".repeat(progressBar - startProgressBar)
+    "█".repeat(startProgressBar) +
+      "-".repeat(progressBar - startProgressBar) +
+      ((startProgressBar % progressBar) * 10 + "%")
   );
 }
